@@ -40,7 +40,7 @@ variable "rds_instance" {
 # RDS module
 ###################
 module "rds_instance" {
-  source            = "github.com/virsas/terraform_rds_instance"
+  source            = "git::https://github.com/virsas/terraform_rds_instance.git?ref=v1.0.0"
   instance          = var.rds_instance
   security_groups   = [ module.vpc_sg_admin.id, module.vpc_sg_sql.id ]
   params            = module.rds_example_params.id
